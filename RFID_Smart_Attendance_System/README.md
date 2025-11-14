@@ -29,15 +29,20 @@ MFRC522 RFID Reader	Reads RFID UID
 I²C (SMBus)	LCD communication
 CSV	Data storage
 hostapd	WiFi hotspot feature
-# Project Structure
+
+## 📂 Project Structure
+
+```
 RFID-Smart-Attendance-System/
 │
-├── attendance.py        → Main attendance script
-├── enroll.py            → Script to add new students
-├── students.csv         → Registered students list
-├── attendance.csv       → Attendance log file
-├── hotspot.conf         → Raspberry Pi hotspot settings
-└── README.md            → Project documentation
+├── attendance.py        # Main attendance script
+├── enroll.py            # Script to add new students
+├── students.csv         # Registered students list
+├── attendance.csv       # Attendance log file
+├── hotspot.conf         # Raspberry Pi hotspot settings
+└── README.md            # Project documentation
+```
+
 
 # Hardware Required
 
@@ -47,38 +52,20 @@ MFRC522 RFID Reader
 
 RFID Cards/Tags
 
-I2C 16x2 LCD (optional)
+I2C 16x2 LCD 
 
 Buzzer
 
-Photo interrupter module (optional)
+Photo interrupter module 
 
 Jumper wires
 
-# Wiring Diagram (Summary)
-MFRC522 to Raspberry Pi
-MFRC522	Raspberry Pi
-SDA	GPIO 8 (CE0)
-SCK	GPIO 11
-MOSI	GPIO 10
-MISO	GPIO 9
-IRQ	Not connected
-GND	GND
-RST	GPIO 22
-3.3V	3.3V
-LCD (I²C)
-LCD Pin	Raspberry Pi
-SDA	GPIO 2
-SCL	GPIO 3
-VCC	5V
-GND	GND
 # How the System Works
 1. Enrollment Mode
 
 Run:
 
 python3 enroll.py
-
 
 Tap card → Reads UID
 
@@ -102,9 +89,9 @@ Reads UID
 Looks up student details
 
 Displays:
-✔ Name
-✔ Roll
-✔ Status
+ Name
+ Roll
+ Status
 
 Logs attendance in attendance.csv
 
@@ -130,8 +117,6 @@ You can access it using:
 
 http://192.168.4.1:8000
 
-
-(If you add a web server later)
 
 # Project Purpose
 
